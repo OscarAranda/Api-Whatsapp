@@ -1,8 +1,8 @@
 const VerifyToken = (req, res ) => {
     try {
-        var accessToken = 'avafvasdfvasdvasdvasd';
+        var accessToken = 'RSDSDG42314tsDFSDV53';
         var token = req.query('hub.verify.token');
-        var challenge = req.body('hub.challenge');
+        var challenge = req.query('hub.challenge');
         if(challenge != null && token != null && token == accessToken){
             res.send(challenge); 
         }else{
@@ -18,6 +18,7 @@ const VerifyToken = (req, res ) => {
 
 
 const RecibedMessage = ( req, res ) => {
+    console.info('Hola received')
     res.send("Hola recibeMessage")
 }
 
