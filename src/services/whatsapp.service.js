@@ -1,8 +1,8 @@
 const https = require('https');
-const env = require('dotenv');
+
 
 function SendMessageWhatsApp(textResponse, number) {
-    const data = JSON.stringfy(
+    const data = JSON.stringify(
         {
             "messaging_product": "whatsapp",
             "to": number,
@@ -17,7 +17,7 @@ function SendMessageWhatsApp(textResponse, number) {
         path: '/v18.0/266547939874298/messages',
         method: 'POST',
         body: data,
-        header: {
+        headers: {
             'content-Type': 'application/json',
             authorization: process.env.AUTHORIZATION
 
