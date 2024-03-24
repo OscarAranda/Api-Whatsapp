@@ -6,10 +6,10 @@ function SendMessageWhatsApp(textResponse, number) {
         {
             "messaging_product": "whatsapp",
             "to": number,
-            "type": "text",
             "text": {
                 "body": textResponse
-            }
+            },
+            "type": "text"
         });
 
     const options = { 
@@ -18,7 +18,7 @@ function SendMessageWhatsApp(textResponse, number) {
         method: 'POST',
         body: data,
         headers: {
-            'content-Type': 'application/json',
+            'Content-Type': 'application/json',
             authorization: process.env.AUTHORIZATION
 
         }
