@@ -19,7 +19,7 @@ function SendMessageWhatsApp(textResponse, number) {
         body: data,
         headers: {
             'Content-Type': 'application/json',
-            authorization: process.env.AUTHORIZATION
+            Authorization: process.env.AUTHORIZATION
 
         }
     };
