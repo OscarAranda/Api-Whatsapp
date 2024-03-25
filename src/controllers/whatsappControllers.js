@@ -28,10 +28,10 @@ const RecibedMessage = ( req, res ) => {
     var entry = (req.body['entry'])[0];
     var changes = (entry['changes'])[0];
     var value = changes['value'];
-    var messageObjet = value['messages'];
+    var messageObject = value['messages'];
 
-    if (typeof messageObjet != 'undefined') {
-        var messages = messageObjet[0];
+    if (typeof messageObject != 'undefined') {
+        var messages = messageObject[0];
         var number = messages['from'];
         var text = GetTextUser( messages );
         myConsole.log(text);
