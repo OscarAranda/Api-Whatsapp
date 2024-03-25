@@ -34,11 +34,11 @@ const RecibedMessage = ( req, res ) => {
     if (typeof messageObject != 'undefined') {
         var messages = messageObject[0];
         var number = messages['from'];
+        number = number.replace('549', '54');
 
         var text = GetTextUser( messages );
         myConsole.log(text);
         myConsole.log(messageObject);
-        myConsole.log(number)
 
         whatsappService.SendMessageWhatsApp( 'El usuario dijo: ' + text, number );
        
