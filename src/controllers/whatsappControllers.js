@@ -29,7 +29,7 @@ const RecibedMessage = ( req, res ) => {
     var changes = (entry['changes'])[0];
     var value = changes['value'];
     var messageObject = value['messages'];
-    myConsole.log(messages.from);
+    
 
     if (typeof messageObject != 'undefined') {
         var messages = messageObject[0];
@@ -37,6 +37,7 @@ const RecibedMessage = ( req, res ) => {
 
         var text = GetTextUser( messages );
         myConsole.log(text);
+        myConsole.log(from);
 
         whatsappService.SendMessageWhatsApp( 'El usuario dijo: ' + text, number );
        
