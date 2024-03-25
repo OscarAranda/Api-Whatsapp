@@ -29,10 +29,12 @@ const RecibedMessage = ( req, res ) => {
     var changes = (entry['changes'])[0];
     var value = changes['value'];
     var messageObject = value['messages'];
+    myConsole.log(messages.from);
 
     if (typeof messageObject != 'undefined') {
         var messages = messageObject[0];
         var number = messages['from'];
+
         var text = GetTextUser( messages );
         myConsole.log(text);
 
@@ -54,10 +56,10 @@ function GetTextUser(messages){
     var text = '';
     var typeMessage = messages['type']
 
-    if(typeMessage == 'text'){
+    if( typeMessage == 'text' ){
         text = (messages['text'])['body']
     }
-    else if(typeMessage == 'interactive'){
+    else if( typeMessage == 'interactive' ){
         var interactiveObject = messages['interactive'];
         var typeInteractive = interactiveObject['type'];
         
