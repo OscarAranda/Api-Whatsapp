@@ -38,6 +38,7 @@ const RecibedMessage = ( req, res ) => {
         var text = GetTextUser( messages );
         myConsole.log(text);
         myConsole.log(messageObject);
+        myConsole.log(number)
 
         whatsappService.SendMessageWhatsApp( 'El usuario dijo: ' + text, number );
        
