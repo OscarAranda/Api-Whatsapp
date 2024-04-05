@@ -40,7 +40,7 @@ function MessageList(number){
                             "rows": [
                                 {
                                     "id": "sst",
-                                    "title": "Nuevo Servicio tecnico",
+                                    "title": "Nuevo Servicio Técnico",
                                     "description": "Solicita técnico para tu equipo"
                                 },
                                 {
