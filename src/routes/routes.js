@@ -4,7 +4,7 @@ const whatsappController = require('../controllers/whatsappControllers');
 
 router
 .get('/', whatsappController.VerifyToken)
-.post('/', whatsappController.RecibedMessage)
+.post('/', whatsappController.RecivedMessage)
 
 
 

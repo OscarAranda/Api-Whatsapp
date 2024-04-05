@@ -1,4 +1,4 @@
-const { text } = require('express');
+
 const fs = require('fs');
 const myConsole = new console.Console(fs.createWriteStream('./logs.txt'));
 const processMessage = require('../shared/processMessage')
@@ -22,7 +22,7 @@ const VerifyToken = (req, res ) => {
 }
 
 
-const RecibedMessage = ( req, res ) => {
+const RecivedMessage = ( req, res ) => {
    
    try {
     var entry = (req.body['entry'])[0];
@@ -91,5 +91,5 @@ function GetTextUser(messages){
 
 module.exports = {
     VerifyToken,
-    RecibedMessage
+    RecivedMessage
 }
