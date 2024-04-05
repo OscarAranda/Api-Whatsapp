@@ -7,6 +7,7 @@ function MessageText(textResponse, number){
             "messaging_product": "whatsapp",
             "to": number,
             "text": {
+                'preview_url': true,
                 "body": textResponse
             },
             "type": "text"
@@ -39,7 +40,7 @@ function MessageList(number){
                             "rows": [
                                 {
                                     "id": "sst",
-                                    "title": "Solicitar nuevo servicio",
+                                    "title": "Nuevo Servicio tecnico",
                                     "description": "Solicita técnico para tu equipo"
                                 },
                                 {
@@ -72,7 +73,121 @@ function MessageList(number){
     
 }
 
+function NewStButtons(number){
+    const data = JSON.stringify(
+        {
+            "messaging_product": "whatsapp",
+            "to": number,
+            "type": "interactive",  
+            "interactive": {
+                "type": "button",
+                "body": {
+                    "text": "Selecciona una opción"
+                },
+                "action": {
+                    "buttons": [
+                        {
+                            "type": "reply",
+                            "reply": {
+                                "id": "001",
+                                "title": "Mancha la hoja"
+                            }
+                        },
+                        {
+                            "type": "reply",
+                            "reply": {
+                                "id": "002",
+                                "title": "Traba las hojas"
+                            }
+                        },
+                        {
+                            "type": "reply",
+                            "reply": {
+                                "id": "003",
+                                "title": "Traba las hojas"
+                            }
+                        },
+                        {
+                            "type": "reply",
+                            "reply": {
+                                "id": "004",
+                                "title": "No enciende"
+                            }
+                        },
+                        {
+                            "type": "reply",
+                            "reply": {
+                                "id": "005",
+                                "title": "Otros"
+                            }
+                        }
+                    ]
+                }
+            }
+        });
+    return data;
+    
+}
+function NewTonerButtons(number){
+    const data = JSON.stringify(
+        {
+            "messaging_product": "whatsapp",
+            "to": number,
+            "type": "interactive",  
+            "interactive": {
+                "type": "button",
+                "body": {
+                    "text": "Selecciona la cantidad"
+                },
+                "action": {
+                    "buttons": [
+                        {
+                            "type": "reply",
+                            "reply": {
+                                "id": "001",
+                                "title": "1"
+                            }
+                        },
+                        {
+                            "type": "reply",
+                            "reply": {
+                                "id": "002",
+                                "title": "2"
+                            }
+                        },
+                        {
+                            "type": "reply",
+                            "reply": {
+                                "id": "003",
+                                "title": "3"
+                            }
+                        },
+                        {
+                            "type": "reply",
+                            "reply": {
+                                "id": "004",
+                                "title": "No enciende"
+                            }
+                        },
+                        {
+                            "type": "reply",
+                            "reply": {
+                                "id": "005",
+                                "title": "Otros"
+                            }
+                        }
+                    ]
+                }
+            }
+        });
+    return data;
+    
+}
+
 
 module.exports = {
-    MessageText,MessageList
+    MessageText,
+    MessageList, 
+    NewStButtons,
+    NewTonerButtons
 }

@@ -22,6 +22,14 @@ function Process( textUser, number ){
         var model = whatsappModel.MessageText('Chau, hasta la proxima!', number );
         models.push( model );
 
+    }else if( textUser.includes( 'Nuevo Servicio Técnico' )){
+        var model = whatsappModel.NewStButtons( number );
+        models.push( model );
+
+    }else if( textUser.includes( 'Solicitar Toner' )){
+        var model = whatsappModel.NewTonerButtons( number );
+        models.push( model );
+
     }else{
         var model = whatsappModel.MessageText('No comprendo lo que dices', number );
         models.push( model );
