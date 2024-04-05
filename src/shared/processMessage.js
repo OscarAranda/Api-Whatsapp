@@ -9,6 +9,8 @@ function Process( textUser, number ){
         // answer
         var model = whatsappModel.MessageText('Hola, un gusto saludarte!', number );
         models.push( model );
+        var modelList = whatsappModel.MessageList( number );
+        models.push( modelList );
 
     }else if( textUser.includes( 'gracias' )){
         var model = whatsappModel.MessageText('Gracias a ti por comunicarte!', number );
