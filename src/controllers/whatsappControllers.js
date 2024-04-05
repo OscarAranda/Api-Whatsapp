@@ -42,40 +42,8 @@ const RecibedMessage = ( req, res ) => {
         myConsole.log(messageObject);
 
         if( text == 'text' ){
-            var data = samples.SampleText( 'Hola Usuario: ', number );
-            whatsappService.SendMessageWhatsApp( data );
+           
 
-        }else if( text == 'image' ){
-            var data = samples.SampleImage( number );
-            whatsappService.SendMessageWhatsApp( data );
-
-        }else if( text == 'video' ){
-            var data = samples.SampleVideo( number );
-            whatsappService.SendMessageWhatsApp( data );
-
-        }else if( text == 'audio' ){
-            var data = samples.SampleAudio( number );
-            whatsappService.SendMessageWhatsApp( data );
-
-        }else if( text == 'document' ){
-            var data = samples.SampleDocument( number);
-            whatsappService.SendMessageWhatsApp( data );
-
-        }else if( text == 'button' ){
-            var data = samples.SampleButtons( number );
-            whatsappService.SendMessageWhatsApp( data );
-
-        }else if( text == 'list' ){
-            var data = samples.SampleList( number );
-            whatsappService.SendMessageWhatsApp( data );
-
-        }else if( text == 'location' ){
-            var data = samples.SampleLocation( number );
-            whatsappService.SendMessageWhatsApp( data );
-
-        }else {
-            var data = samples.SampleText( 'no compredo', number);
-            whatsappService.SendMessageWhatsApp( data );
         }
 
         
