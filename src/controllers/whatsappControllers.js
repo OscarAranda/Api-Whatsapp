@@ -1,8 +1,7 @@
 const { text } = require('express');
 const fs = require('fs');
 const myConsole = new console.Console(fs.createWriteStream('./logs.txt'));
-const whatsappService = require('../services/whatsapp.service');
-const samples = require('../shared/sampleModels');
+const processMessage = require('../shared/processMessage')
 
 const VerifyToken = (req, res ) => {
     try {
@@ -41,8 +40,8 @@ const RecibedMessage = ( req, res ) => {
         myConsole.log(text);
         myConsole.log(messageObject);
 
-        if( text == 'text' ){
-           
+        if( text != '' ){
+           processMessage.Process( text, number );
 
         }
 
