@@ -34,9 +34,11 @@ function Process( textUser, number ){
         var model = whatsappModel.MessageText('No comprendo lo que dices', number );
         models.push( model );
     }
-    models.forEach(model => {
-        whatsappService.SendMessageWhatsApp( model );
-    });
+    async function sendMessagesSequentially( models ){ 
+        for (const model of models ) {
+            await  whatsappService.SendMessageWhatsApp( model );
+        }
+    }
 }
 
 module.exports = {
