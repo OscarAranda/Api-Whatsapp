@@ -99,27 +99,6 @@ function NewStButtons(number) {
                                 "id": "002-st",
                                 "title": "Traba las hojas"
                             }
-                        },
-                        {
-                            "type": "reply",
-                            "reply": {
-                                "id": "003-st",
-                                "title": "Traba las hojas"
-                            }
-                        },
-                        {
-                            "type": "reply",
-                            "reply": {
-                                "id": "004-st",
-                                "title": "No enciende"
-                            }
-                        },
-                        {
-                            "type": "reply",
-                            "reply": {
-                                "id": "005-st",
-                                "title": "Otros"
-                            }
                         }
                     ]
                 }
@@ -153,27 +132,6 @@ function NewTonerButtons(number) {
                             "reply": {
                                 "id": "002-tn",
                                 "title": "2"
-                            }
-                        },
-                        {
-                            "type": "reply",
-                            "reply": {
-                                "id": "003-tn",
-                                "title": "3"
-                            }
-                        },
-                        {
-                            "type": "reply",
-                            "reply": {
-                                "id": "004-tn",
-                                "title": "No enciende"
-                            }
-                        },
-                        {
-                            "type": "reply",
-                            "reply": {
-                                "id": "005-tn",
-                                "title": "Otros"
                             }
                         }
                     ]
