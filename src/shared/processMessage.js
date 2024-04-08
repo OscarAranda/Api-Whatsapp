@@ -8,7 +8,7 @@ async function Process( textUser, number ){
     if(textUser.includes('hola')){
         // answer
         var model = whatsappModel.MessageText('Hola, un gusto saludarte!', number );
-        models.push( model );
+        models.unshift( model );
         var modelList = whatsappModel.MessageList( number );
         models.push( modelList );
 
@@ -34,9 +34,9 @@ async function Process( textUser, number ){
         var model = whatsappModel.MessageText('No comprendo lo que dices', number );
         models.push( model );
     }
-    await models.forEach( model =>{
-        whatsappService.SendMessageWhatsApp( model );
-    } )
+    for (let model of models){
+        await whatsappService.SendMessageWhatsApp( model );
+    }
 }
 
 module.exports = {
