@@ -26,7 +26,7 @@ async function Process(textUser, number) {
         var model = whatsappModel.NewStButtons(number);
         models.push(model);
 
-    } else if (textUser.includes('isnsumos')) {
+    } else if (textUser.includes('insumos')) {
         var model = whatsappModel.NewTonerButtons(number);
         models.push(model);
 
@@ -34,7 +34,7 @@ async function Process(textUser, number) {
         var model = whatsappModel.Location(number);
         models.push(model);
 
-    }else if (textUser.includes('cotacto')) {
+    }else if (textUser.includes('contacto')) {
         var model = whatsappModel.MessageText('*Solo llamadas:*\n 43414840',number);
         models.push(model);
 
