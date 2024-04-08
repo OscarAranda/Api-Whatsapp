@@ -51,17 +51,17 @@ function MessageList(number) {
                             ]
                         },
                         {
-                            "title": "Ver estado de pedido",
+                            "title": "Datos importates",
                             "rows": [
                                 {
-                                    "id": "st",
-                                    "title": "Servicios tecnicos",
-                                    "description": "Puedes ver el estado de tu solicitud de tecnico"
+                                    "id": "ubi",
+                                    "title": "Ubicació de la empresa",
+                                    "description": "Visitanos con cita previa"
                                 },
                                 {
-                                    "id": "insumos",
-                                    "title": "Insumos",
-                                    "description": "Puedes ver el estado de tu pedido"
+                                    "id": "contacto",
+                                    "title": "Telefono de contacto",
+                                    "description": "Habla con nuestro personal"
                                 }
                             ]
                         }
