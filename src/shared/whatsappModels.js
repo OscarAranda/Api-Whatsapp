@@ -1,7 +1,7 @@
 
 
 // texto
-function MessageText(textResponse, number){
+function MessageText(textResponse, number) {
     const data = JSON.stringify(
         {
             "messaging_product": "whatsapp",
@@ -13,15 +13,15 @@ function MessageText(textResponse, number){
             "type": "text"
         });
     return data;
-    
+
 }
 
-function MessageList(number){
+function MessageList(number) {
     const data = JSON.stringify(
         {
             "messaging_product": "whatsapp",
             "to": number,
-            "type": "interactive",  
+            "type": "interactive",
             "interactive": {
                 "type": "list",
                 "header": {
@@ -31,7 +31,7 @@ function MessageList(number){
                 "body": {
                     "text": "Seleciona una de las opciones de la lista"
                 },
-                
+
                 "action": {
                     "button": "ver opciones 🔢",
                     "sections": [
@@ -70,15 +70,15 @@ function MessageList(number){
             }
         });
     return data;
-    
+
 }
 
-function NewStButtons(number){
+function NewStButtons(number) {
     const data = JSON.stringify(
         {
             "messaging_product": "whatsapp",
             "to": number,
-            "type": "interactive",  
+            "type": "interactive",
             "interactive": {
                 "type": "button",
                 "body": {
@@ -115,9 +115,9 @@ function NewStButtons(number){
                             }
                         },
                         {
-                            "type": "reply-st",
+                            "type": "reply",
                             "reply": {
-                                "id": "005",
+                                "id": "005-st",
                                 "title": "Otros"
                             }
                         }
@@ -126,14 +126,14 @@ function NewStButtons(number){
             }
         });
     return data;
-    
+
 }
-function NewTonerButtons( number ){
+function NewTonerButtons(number) {
     const data = JSON.stringify(
         {
             "messaging_product": "whatsapp",
             "to": number,
-            "type": "interactive",  
+            "type": "interactive",
             "interactive": {
                 "type": "button",
                 "body": {
@@ -181,13 +181,13 @@ function NewTonerButtons( number ){
             }
         });
     return data;
-    
+
 }
 
 
 module.exports = {
     MessageText,
-    MessageList, 
+    MessageList,
     NewStButtons,
     NewTonerButtons
 }
