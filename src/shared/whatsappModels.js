@@ -141,11 +141,28 @@ function NewTonerButtons(number) {
     return data;
 
 }
+function Location(number){
+    const data = JSON.stringify(
+        {
+            "messaging_product": "whatsapp",
+            "to": number,
+            "type": "location",  
+            "location": {
+                "latitude":"-34.64033585196683 ",
+                "longitude":"-58.38030781045057",
+                "name":"CBCGROUP",
+                "address":"ARcamendia 670 CABA"
+            }
+        });
+    return data;
+    
+}
 
 
 module.exports = {
     MessageText,
     MessageList,
     NewStButtons,
-    NewTonerButtons
+    NewTonerButtons,
+    Location
 }
