@@ -1,7 +1,7 @@
 const whatsappModel = require('./whatsappModels');
 const whatsappService = require('../services/whatsapp.service');
 
-function Process( textUser, number ){
+async function Process( textUser, number ){
     textUser = textUser.toLowerCase();
     var models = [];
     // if message in
@@ -34,13 +34,12 @@ function Process( textUser, number ){
         var model = whatsappModel.MessageText('No comprendo lo que dices', number );
         models.push( model );
     }
-    async function sendMessagesSequentially( models ){ 
-        for (const model of models ) {
-            await  whatsappService.SendMessageWhatsApp( model );
-        }
-    }
+    await models.forEach( model =>{
+        whatsappService.SendMessageWhatsApp( model );
+    } )
 }
 
 module.exports = {
-    Process
+    Process,
+    
 }
