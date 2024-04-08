@@ -131,4 +131,4 @@ dist
 
 
 #logs
-logs.txt
+*.txt
