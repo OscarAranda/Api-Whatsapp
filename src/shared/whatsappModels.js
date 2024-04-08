@@ -89,33 +89,33 @@ function NewStButtons(number){
                         {
                             "type": "reply",
                             "reply": {
-                                "id": "001",
+                                "id": "001-st",
                                 "title": "Mancha la hoja"
                             }
                         },
                         {
                             "type": "reply",
                             "reply": {
-                                "id": "002",
+                                "id": "002-st",
                                 "title": "Traba las hojas"
                             }
                         },
                         {
                             "type": "reply",
                             "reply": {
-                                "id": "003",
+                                "id": "003-st",
                                 "title": "Traba las hojas"
                             }
                         },
                         {
                             "type": "reply",
                             "reply": {
-                                "id": "004",
+                                "id": "004-st",
                                 "title": "No enciende"
                             }
                         },
                         {
-                            "type": "reply",
+                            "type": "reply-st",
                             "reply": {
                                 "id": "005",
                                 "title": "Otros"
@@ -128,7 +128,7 @@ function NewStButtons(number){
     return data;
     
 }
-function NewTonerButtons(number){
+function NewTonerButtons( number ){
     const data = JSON.stringify(
         {
             "messaging_product": "whatsapp",
@@ -144,35 +144,35 @@ function NewTonerButtons(number){
                         {
                             "type": "reply",
                             "reply": {
-                                "id": "001",
+                                "id": "001-tn",
                                 "title": "1"
                             }
                         },
                         {
                             "type": "reply",
                             "reply": {
-                                "id": "002",
+                                "id": "002-tn",
                                 "title": "2"
                             }
                         },
                         {
                             "type": "reply",
                             "reply": {
-                                "id": "003",
+                                "id": "003-tn",
                                 "title": "3"
                             }
                         },
                         {
                             "type": "reply",
                             "reply": {
-                                "id": "004",
+                                "id": "004-tn",
                                 "title": "No enciende"
                             }
                         },
                         {
                             "type": "reply",
                             "reply": {
-                                "id": "005",
+                                "id": "005-tn",
                                 "title": "Otros"
                             }
                         }
