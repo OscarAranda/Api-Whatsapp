@@ -1,10 +1,15 @@
 const whatsappModel = require('./whatsappModels');
 const whatsappService = require('../services/whatsapp.service');
+const chatgptService = require('../services/chatgpt-service')
 
 async function Process(textUser, number) {
+    const resultChatGPT =  await chatgptService.GetMessageChatGPT( textUser );
     textUser = textUser.toLowerCase();
     var models = [];
-    // if message in
+
+
+    //#region sin chatgpt
+    // if message in 
     if (textUser.includes('hola')) {
         // answer
         var model = whatsappModel.MessageText('Hola, un gusto saludarte!', number);
@@ -42,6 +47,20 @@ async function Process(textUser, number) {
         var model = whatsappModel.MessageText('No comprendo lo que dices', number);
         models.push(model);
     }
+    // #endregion
+
+    //#region con chatgpt
+
+
+    // if( resultChatGPT != null){
+    //     var model = whatsappModel.MessageText( resultChatGPT, number );
+    //     models.push( model );
+    // }else{
+    //     var model = whatsappModel.MessageText('Lo siento, algo salio mal. Intentelo mas tarde.', number)
+    //     models.push( model );
+    // }
+
+    //#endregion
     for (let model of models) {
         await whatsappService.SendMessageWhatsApp(model);
     }

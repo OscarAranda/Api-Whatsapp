@@ -5,7 +5,7 @@ const processMessage = require('../shared/processMessage')
 
 const VerifyToken = (req, res ) => {
     try {
-        var accessToken = 'RSDSDG42314TSDFSDV53';
+        var accessToken = 'RSDSDG42314TLulrKcLekUewOV1MPmf9oI5l7gB4zE7qwIpbpH2YM5oMHaLYxy5RL6QlHBquuqQZSDFSDV53';
         var token = req.query['hub.verify_token'];
         var challenge = req.query['hub.challenge'];
         if(challenge != null && token != null && token == accessToken){
@@ -22,7 +22,7 @@ const VerifyToken = (req, res ) => {
 }
 
 
-const RecivedMessage = ( req, res ) => {
+async function RecivedMessage ( req, res ) {
    
    try {
     var entry = (req.body['entry'])[0];
@@ -41,7 +41,8 @@ const RecivedMessage = ( req, res ) => {
         myConsole.log(messageObject);
 
         if( text != '' ){
-           processMessage.Process( text, number );
+           
+           await processMessage.Process( text, number );
 
         }
 
