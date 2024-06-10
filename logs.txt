@@ -1,0 +1,32 @@
+hola ..mlklkjj
+[
+  {
+    from: '51123456789',
+    id: 'wamid.HBgLNTE5NDM2NjI5NjQVAgASGBQzQUNCODUzN0U1QkU5MkZENTFBQwA=',
+    Timestamp: '1660362642',
+    type: 'text',
+    text: { body: 'hola ..mlklkjj' },
+    interactive: null,
+    image: null,
+    audio: null,
+    video: null,
+    document: null,
+    sticker: null,
+    location: null,
+    contacts: null,
+    system: null
+  }
+]
+TypeError [ERR_HTTP_INVALID_HEADER_VALUE]: Invalid value "undefined" for header "Authorization"
+    at ClientRequest.setHeader (node:_http_outgoing:648:3)
+    at new ClientRequest (node:_http_client:292:14)
+    at Object.request (node:https:360:10)
+    at Object.SendMessageWhatsApp (/home/oscar/capacitaciones/chatBot/apiWhatsapp/src/services/whatsapp.service.js:17:23)
+    at Object.Process (/home/oscar/capacitaciones/chatBot/apiWhatsapp/src/shared/processMessage.js:65:31)
+    at RecivedMessage (/home/oscar/capacitaciones/chatBot/apiWhatsapp/src/controllers/whatsappControllers.js:45:33)
+    at Layer.handle [as handle_request] (/home/oscar/capacitaciones/chatBot/apiWhatsapp/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/oscar/capacitaciones/chatBot/apiWhatsapp/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/oscar/capacitaciones/chatBot/apiWhatsapp/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/oscar/capacitaciones/chatBot/apiWhatsapp/node_modules/express/lib/router/layer.js:95:5) {
+  code: 'ERR_HTTP_INVALID_HEADER_VALUE'
+}

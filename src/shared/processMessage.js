@@ -1,9 +1,9 @@
 const whatsappModel = require('./whatsappModels');
 const whatsappService = require('../services/whatsapp.service');
-const chatgptService = require('../services/chatgpt-service')
+// const chatgptService = require('../services/chatgpt-service')
 
 async function Process(textUser, number) {
-    const resultChatGPT =  await chatgptService.GetMessageChatGPT( textUser );
+    // const resultChatGPT =  await chatgptService.GetMessageChatGPT( textUser );
     textUser = textUser.toLowerCase();
     var models = [];
 
